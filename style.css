@@ -1,4 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
 :root {
   --body-bg-color: #faf7fd;
   --purple: #bb99dd;
+}
+
+body {
+  /*Cor de fundo alterada largura estabelecida para ocupar 100% da capacidade*/
+  background-color: #faf7fd;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+img {
+  border-radius: 50%;
+  border: #bb99dd solid 3px;
+  height: 200px;
+  width: 200px;
+  padding: 5px;
+}
+
+main {
+  margin-top: 38px;
+}
+
+p.menu {
+  margin-top: 10px;
+  color: #bb99dd;
+}
+
+a:link {
+  color: #bb99dd;
+}
+
+a:visited {
+  color: #bb99dd;
+}
+
+a:hover {
+  color: #9a50e4;
+}
+
+li.menu {
+  list-style-type: none;
+  border: #bb99dd solid 2px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  width: 326px;
+  height: 49px;
+  text-align: center;
+}
+
+section#sub-menu {
+  width: 236px;
+  height: 24px;
+}
+/*Botei flex no ul e ficou em linha e foi para o lado, justify content center alinhou no meio  */
+ul#sub-menu1 {
+  display: flex;
+}
+
+li.sub-menu {
+  list-style-type: none;
+  width: 236px;
+  height: 24px;
+}
+
+footer {
+  margin-top: 52px;
 }
