@@ -8,6 +8,10 @@
   --body-bg-color: #faf7fd;
   --purple: #bb99dd;
 }
+/*Retirar o sublinhando das tags a */
+a {
+  text-decoration: none;
+}
 
 body {
   /*Cor de fundo alterada largura estabelecida para ocupar 100% da capacidade*/
