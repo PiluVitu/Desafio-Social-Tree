@@ -1,84 +1,182 @@
+:root {
+  --hue: 270;
+  --body-bg-color: hsl(var(--hue), 60%, 98%);
+  --purple: hsl(var(--hue), 50%, 73%);
+  font-size: 62.5%;
+}
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
-}
-:root {
-  --body-bg-color: #faf7fd;
-  --purple: #bb99dd;
-}
-/*Retirar o sublinhando das tags a */
-a {
+  list-style: none;
   text-decoration: none;
 }
 
 body {
-  /*Cor de fundo alterada largura estabelecida para ocupar 100% da capacidade*/
-  background-color: #faf7fd;
-  text-align: center;
   height: 100vh;
-  width: 100vw;
+
+  font-size: 1.6rem;
+
+  display: grid;
+  place-items: center;
+
+  font-family: 'Poppins', sans-serif;
+
+  background-color: var(--body-bg-color);
+
+  transition: all 0.5s;
+}
+a {
+  color: var(--purple);
+}
+
+.container {
+  width: 32.8rem;
+
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
 }
 
-img {
-  border-radius: 50%;
-  border: #bb99dd solid 3px;
-  height: 200px;
-  width: 200px;
-  padding: 5px;
-}
-
-main {
-  margin-top: 38px;
-}
-
-p.menu {
-  margin-top: 10px;
-  color: #bb99dd;
-}
-
-a:link {
-  color: #bb99dd;
-}
-
-a:visited {
-  color: #bb99dd;
-}
-
-a:hover {
-  color: #9a50e4;
-}
-
-li.menu {
-  list-style-type: none;
-  border: #bb99dd solid 2px;
-  border-radius: 4px;
-  margin-bottom: 16px;
-  width: 326px;
-  height: 49px;
-  text-align: center;
-}
-
-section#sub-menu {
-  width: 236px;
-  height: 24px;
-}
-/*Botei flex no ul e ficou em linha e foi para o lado, justify content center alinhou no meio  */
-ul#sub-menu1 {
+.profile {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.profile img {
+  height: 20rem;
+  width: 20rem;
+
+  border-radius: 50%;
+  object-fit: cover;
+
+  padding: 0.3rem;
+
+  border: 2px solid var(--purple);
+
+  transition: all 0.5s;
+}
+.profile img:hover {
+  width: 21rem;
+  height: 21rem;
+}
+.img {
+  display: grid;
+  place-items: center;
+}
+.profile .img:after {
+  content: 'Olá, bem vindo ao meu portfolio, abaixo você encontra alguns projetos que eu já fiz seja ele desafio ou pessoal. Qualquer dúvida pode me chamar no linkedIn.';
+  color: var(--purple);
+  display: block;
+  font-weight: 600;
+  font-size: 1.6rem;
+  transform: translateY(-2px);
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  opacity: 0;
+  line-height: 2.4rem;
+  transition: all 0.5s;
+}
+.profile .img:hover:after {
+  transform: translateY(12px);
+  position: unset;
+  opacity: 1;
 }
 
-li.sub-menu {
-  list-style-type: none;
-  width: 236px;
-  height: 24px;
+.profile a {
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+.profile a:hover {
+  filter: saturate(200%);
 }
 
-footer {
-  margin-top: 52px;
+.projectsLinks {
+  margin-block: 3.3rem 6.8rem;
+  width: 100%;
+}
+.projectsLinks nav {
+  display: grid;
+
+  gap: 1.6rem;
+}
+.projectsLinks nav a {
+  border: 2px solid var(--purple);
+  border-radius: 4px;
+
+  padding-block: 1.3rem;
+
+  text-align: center;
+
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+
+  transition: all 0.3s;
+}
+
+.projectsLinks nav a:hover {
+  background-color: var(--purple);
+  color: var(--body-bg-color);
+}
+
+.socialLinks nav {
+  display: flex;
+  align-items: center;
+  gap: 2.9rem;
+}
+.socialLinks nav a {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  transition: all 0.5s;
+}
+.socialLinks nav a::after {
+  content: 'Text';
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  transform: translateX(-2rem);
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  opacity: 0;
+  transition: all 0.6s;
+}
+.socialLinks nav a:hover:after,
+.socialLinks nav a:focus:after {
+  transform: translateX(0.2rem);
+  position: unset;
+  display: inline;
+  opacity: 1;
+}
+
+.socialLinks svg path {
+  stroke: var(--purple);
+}
+
+.socialLinks nav #gitHub::after {
+  content: 'GitHub';
+}
+.socialLinks nav #instagram::after {
+  content: 'Instagram';
+}
+.socialLinks nav #linkedIn::after {
+  content: 'LinkedIn';
+}
+.socialLinks nav #twitch::after {
+  content: 'Twitch';
+}
+.socialLinks nav #twitter::after {
+  content: 'Twitter';
+}
+
+@media (max-width: 375px) {
+  :root {
+    font-size: 52%;
+  }
 }
