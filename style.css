@@ -159,19 +159,19 @@ a {
   stroke: var(--purple);
 }
 
-.socialLinks nav #gitHub::after {
+.socialLinks nav #gitHubProfile::after {
   content: 'GitHub';
 }
-.socialLinks nav #instagram::after {
+.socialLinks nav #instagramProfile::after {
   content: 'Instagram';
 }
-.socialLinks nav #linkedIn::after {
+.socialLinks nav #linkedInProfile::after {
   content: 'LinkedIn';
 }
-.socialLinks nav #twitch::after {
+.socialLinks nav #twitchProfile::after {
   content: 'Twitch';
 }
-.socialLinks nav #twitter::after {
+.socialLinks nav #twitterProfile::after {
   content: 'Twitter';
 }
 
